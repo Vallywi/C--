@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	int number;
+	
+	cout << "Positive, Negative, Zero Checker!" << endl;
+	cout << "Type a number: ";
+	cin >> number;
+	
+	if (number > 0){
+		cout << "Your number is Positive";
+	}	
+	if (number < 0){
+		cout << "Your number is Negative";
+	}
+	else if (number == 0){
+		cout << "Your number is Zero";
+	}
+	
+	return 0;
+}
