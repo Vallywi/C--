@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main (){
+	string pin;
+	cout << "Hello this is Val's ATM" << endl;
+	cout << "Enter your pin number: ";
+	getline (cin, pin);
+	
+	if (pin == "100723") {
+		cout << "You are successfully logged in to your account";
+	}
+	else {
+		cout << "Your pin number is error";
+	}
+	return 0;
+}
