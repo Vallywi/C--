@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	int grade;
+	
+	cout << "Grade Checker in FEUTECH!" << endl;
+	cout << "Enter your grade: ";
+	cin >> grade;
+	
+	if (grade <= 100 && grade >= 97) {
+		cout << "Your grade point is 4.0 and you are Excellent";
+	}
+	else if(grade <= 96 && grade >= 93) {
+		cout << "Your grade point is 3.5 and you are Superior";
+	}
+	else if (grade <= 92 && grade >= 89){
+		cout << "Your grade point is 3.0 and you are Very Good";
+	}
+	else if (grade <= 88 && grade >= 85){
+		cout << "Your grade point is 2.5 and you are Good";
+	}
+	else if (grade <= 84 && grade >= 80){
+		cout << "Your grade point is 2.0 and you are Satisfactory";
+	}
+	else if (grade <= 79){
+		cout << "Your grade is 0.5 and you are fail";
+	}
+	else { 
+		cout << "Incorrect";
+	}
+	
+	return 0;
+}
