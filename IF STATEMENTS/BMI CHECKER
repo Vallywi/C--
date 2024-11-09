@@ -1,0 +1,49 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	double weight, height, bmi, final_height;
+	
+	cout << "BMI CALCULATOR AND IDENTIFIER" << endl;
+	cout << "Enter your weight: ";
+	cin >> weight;
+	cout << "Enter your height: ";
+	cin >> height;
+	
+	final_height = height * height;
+	bmi = weight / final_height;
+	cout << fixed << setprecision(1);
+	
+	if (bmi < 16.0) {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Severely Underweight";
+	}
+	else if (bmi <= 18.4 && bmi >= 16.0) {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Underweight";
+	}
+	else if (bmi <= 24.9 && bmi >= 18.5) {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Normal";
+	}
+	else if (bmi <= 29.9 && bmi >= 25.0) {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Overweight";
+	}
+		else if (bmi <= 34.9 && bmi >= 30.0) {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Moderately Obese";
+	}
+		else if (bmi <= 35.0 && bmi >= 39.9) {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Severely Obese";
+	}
+	else {
+		cout << "Your BMI is " << bmi << endl 
+		<< "The Category is Morbidly Obese";
+	}
+	
+	return 0;
+}
