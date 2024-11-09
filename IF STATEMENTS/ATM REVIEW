@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int correctPin = 1234; 
+    int enteredPin;
+    int attempts = 3; 
+
+    while (attempts > 0) {
+        
+        cout << "Enter your PIN: ";
+        cin >> enteredPin;
+        if (enteredPin == correctPin) {
+            cout << "Access granted. Welcome!" << endl;
+            break; 
+        } else {
+            attempts--;
+            cout << "Incorrect PIN. You have " << attempts << " attempt(s) left." << endl;
+        }
+
+        if (attempts == 0) {
+            cout << "Access denied. You have exceeded the maximum number of attempts." << endl;
+        }
+    }
+
+    return 0;
+}
