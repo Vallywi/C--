@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	float num1, num2;
+	float add, times, sub, devide;
+	string operation;
+	
+	cout << "Hello welcome to math calculator!" << endl;
+	cout << "Enter the two number: ";
+	cin >> num1 >> num2;
+	cin.ignore();
+	cout << "Choose the operation ( + , - , / , x ): ";
+	getline (cin, operation);
+	
+	if (operation == "+") {
+		add = num1 + num2;
+		cout << "The answer is " << add;
+	}
+	else if (operation == "-") {
+		sub = num1 + num2;
+		cout << "The answer is " << sub;
+	}
+	else if (operation == "x") {
+		times = num1 * num2;
+		cout << "The answer is " << times;
+	}
+	else if (operation == "/") {
+		if (num2 != 0 && num1 != 0) {
+		
+		devide = num1 / num2;
+		cout << fixed << setprecision(2);
+		cout << "The answer is " << devide;
+		}
+		else {
+			cout << "Error division by zero is not enough";
+		}
+	}
+	else {
+		cout << "Your operation is incorrect";
+	}
+	
+	return 0;
+}
