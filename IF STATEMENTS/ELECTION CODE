@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	int age;
+	
+	cout << "Age Qualification for Election" << endl;
+	cout << "Your age: ";
+	cin >> age;
+	
+	if (age >= 18){
+		cout << "Your age is eligible to vote";
+	} 
+	else { 
+		cout << "You are not eligible to vote";
+	}
+	
+}
