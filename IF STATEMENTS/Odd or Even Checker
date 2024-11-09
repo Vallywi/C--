@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	int number;
+	
+	cout << "Odd or Even checker!" << endl;
+	cout << "Enter your number: ";
+	cin >> number;
+	
+	if (number % 2 == 0) {
+		cout << "Your number is Even";
+	}
+	else {
+		cout << "Your number is Odd";
+	}
+	
+	return 0;
+}
