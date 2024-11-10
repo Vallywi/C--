@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+	char choice;
+	float first, second, sum, sub, times, div;
+	
+	cout << "Automative Calculator" << endl;
+	cout << "Enter first number: ";
+	cin >> first;
+	cout << "Enter the second number: ";
+	cin >> second;
+	cout << "Choose the operation ( + , - , / , x ): ";
+	cin >> choice;
+	
+	
+	switch (choice){
+		
+		case '-': 
+			sub = first - second;
+			cout << "The answer is " << sub;
+		break;
+		
+		case '+':
+			sum = first + second;
+			cout << "The answer is " << sum;
+		break;
+		
+		case 'x':
+			times = first * second;
+			cout << "The answer is " << times;
+		break;
+		
+		case '/':
+			if (second < 0 && first < 0) {
+				cout << "We cannot execute this";
+			}
+			else{
+				div = first / second;
+				cout << "The answer is " << div;
+			}
+		break;
+		
+		default:
+			cout << "Invalid option. Please select ( + , - , / , x )";
+		
+	}
+	
+	return 0;
+	
+}
