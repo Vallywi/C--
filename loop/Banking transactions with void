@@ -1,0 +1,92 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void banking (string username, double balance = 1000);
+
+int main (){
+	string username, pass;
+	char tryagain;
+	
+	do {
+	
+	cout << "Enter your username: ";
+	getline (cin, username);
+	cout << "Enter your password: ";
+	getline (cin, pass);
+	
+	if (pass == "12345") {
+		cout << "your password is correct \n";
+		banking (username);
+		
+		break;
+	}
+	else {
+		cout << "Your password is incorrect\n";
+		}
+	
+	cout << "Do you want to try again?";
+	cin >> tryagain;
+	cin.ignore();
+	
+	} while (tryagain == 'Y' || tryagain == 'y' );
+	
+}
+
+void banking (string username, double balance){
+	char option, again;
+	double deposit, withdraw;
+	
+	
+
+do {
+	cout << endl;
+	cout << "Hello " << username << " Welcome to banking system!! \n";
+	cout << "1. View Balance \n";
+	cout << "2. Deposit Money \n";
+	cout << "3. Withdraw Money \n";
+	cout << "4. Exit \n";
+	cout << "Choose an option: ";
+	cin >> option;
+	
+	switch (option) {
+	
+	case '1': 
+	cout << "Your remaining balance is " << balance;
+	break;
+	
+	case '2':
+		cout << "How much money you will deposit? ";
+		cin >> deposit;
+		balance += deposit;
+		cout << "Your balance is " << balance;
+	break;
+	
+	case '3':
+		cout << "How much you will withdraw? ";
+		cin >> withdraw;
+		if (balance > withdraw) {
+		balance -= withdraw;
+		cout << "Your balance is " << balance;
+		}
+		else if (balance < withdraw) {
+		cout << "You have inssuficient balance";
+		}
+	
+	break;
+	
+	case '4':
+		cout << "Thank you for coming";
+		exit (1);
+	break;
+	
+	default: 
+		cout << "You type a wrong choices";
+	
+	}
+	
+	cout << "\nDo you still want to continue?";
+	cin >> again;
+	
+} while (again == 'y' || again == 'Y');
+}
