@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	
+	int n, factor = 1, tryagain;
+	
+	do {
+	cout << "Enter a number: ";
+	cin >> n;
+	
+	if (n %2 == 0){
+	for (int i = 1; i<=n;++i){
+	factor *=i;	
+		
+	}
+	cout << "The factorial of " << n << " is " << factor << endl;
+	}
+	else {
+		cout << "We cannot execute this\n";
+	}
+	
+	}while (tryagain != 5);
+
+return 0;
+	
+}
