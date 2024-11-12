@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main (){
+	int love = 10;
+	
+	do {
+		
+		cout << love << "\n"; love--;
+		
+		
+		
+	}while (love >= 1);
+	
+	cout << "I love you!!";
+	
+	
+	
+}
