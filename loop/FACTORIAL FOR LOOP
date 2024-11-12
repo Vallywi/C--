@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	
+	int n, factor = 1, tryagain;
+	
+	cout << "Enter a number: ";
+	cin >> n;
+	
+	for (int i = 1; i<=n;++i){
+	factor *=i;	
+		
+	}
+	cout << "The factorial of " << n << " is " << factor << endl << endl;
+
+  return 0;
+}
