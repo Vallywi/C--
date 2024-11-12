@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main (){
+	int n, multi;
+	
+	cout << "Enter the number for Multiplication: ";
+	cin >> n;
+	
+	cout << "The Multiplication table of " << n << endl;
+	
+	for (int i = 1; i <= 10; i++) {
+		multi = n*i;
+		cout << n << " x " << i << " = " << multi << endl;
+		
+	}
+}
