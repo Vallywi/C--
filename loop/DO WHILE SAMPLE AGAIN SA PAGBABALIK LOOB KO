@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+	int number;
+	char option;
+	
+	do {
+	cout << "Odd or Even checker!" << endl;
+	cout << "Enter your number: ";
+	cin >> number;
+	
+	if (number % 2 == 0) {
+		cout << "Your number is Even \n";
+	}
+	else {
+		cout << "Your number is Odd \n";
+	}
+	
+	cout << "Do you want to check again? (Y or N) ";
+	cin >> option;
+	} while (option == 'y'|| option == 'Y');
+	
+	return 0;
+}
