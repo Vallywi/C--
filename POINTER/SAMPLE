@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int val = 400;
+    int *ptr = &val;
+    int **pptr = &ptr;
+    int ***ppptr = &pptr;
+    
+    cout << val << "\n";
+    cout << *ptr << "\n";
+    cout << **pptr << "\n";
+    cout << ***ppptr << "\n";
+    
+    return 0;
+}
