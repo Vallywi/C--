@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void yes(int arr[], int sample);
+
+
+int main(){
+	int sample;
+	cout << "How many arrays of row: ";
+	cin >> sample;
+	
+	int arr[sample];
+	
+	cout << "Enter the " << sample << " values: ";
+	yes(arr, sample);
+	
+	return 0;
+}
+
+void yes(int arr[], int sample){
+    for (int i=0; i < sample; i++){
+		cin >> arr[i];
+	}
+	for (int i = 0; i < sample; i++){
+		cout << arr[i] << " ";
+	}
+    
+}
