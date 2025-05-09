@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int sample;
+    
+    cout << "Input the size of array: ";
+    cin >> sample;
+    
+    int arr[sample];
+    cout << "Input " << sample <<" integers: ";
+    
+    for (int i = 0; i < sample; i++){
+        cin >> arr[i];
+    }
+    
+    int pantay, stay = 0;
+    cout << "Input the element to count in the array: ";
+    cin >> pantay;
+    for (int i = 0; i < sample; i++){
+        if(pantay == arr[i])
+        stay++;
+    }
+    cout << "Number of count \"" << pantay << "\" element in the array is: " << stay; 
+    return 0;
+}
